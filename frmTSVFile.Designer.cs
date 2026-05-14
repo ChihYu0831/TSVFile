@@ -48,6 +48,7 @@
             // 
             // mnsWord
             // 
+            this.mnsWord.BackColor = System.Drawing.Color.CornflowerBlue;
             this.mnsWord.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.mnsWord.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.mnsWord.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -109,21 +110,22 @@
             this.ssrWord.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.ssrWord.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsslMessage});
-            this.ssrWord.Location = new System.Drawing.Point(0, 417);
+            this.ssrWord.Location = new System.Drawing.Point(0, 420);
             this.ssrWord.Name = "ssrWord";
-            this.ssrWord.Size = new System.Drawing.Size(1302, 25);
+            this.ssrWord.Size = new System.Drawing.Size(1302, 22);
             this.ssrWord.TabIndex = 1;
             this.ssrWord.Text = "statusStrip1";
             // 
             // tsslMessage
             // 
-            this.tsslMessage.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.tsslMessage.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.tsslMessage.Name = "tsslMessage";
-            this.tsslMessage.Size = new System.Drawing.Size(75, 20);
+            this.tsslMessage.Size = new System.Drawing.Size(62, 17);
             this.tsslMessage.Text = "Message";
             // 
             // lvwWord
             // 
+            this.lvwWord.BackColor = System.Drawing.SystemColors.ControlLight;
             this.lvwWord.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.chWord,
             this.chPhonogram,
@@ -131,10 +133,11 @@
             this.chExplain});
             this.lvwWord.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lvwWord.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lvwWord.ForeColor = System.Drawing.SystemColors.WindowText;
             this.lvwWord.HideSelection = false;
             this.lvwWord.Location = new System.Drawing.Point(0, 28);
             this.lvwWord.Name = "lvwWord";
-            this.lvwWord.Size = new System.Drawing.Size(1302, 389);
+            this.lvwWord.Size = new System.Drawing.Size(1302, 392);
             this.lvwWord.TabIndex = 2;
             this.lvwWord.UseCompatibleStateImageBehavior = false;
             this.lvwWord.View = System.Windows.Forms.View.Details;

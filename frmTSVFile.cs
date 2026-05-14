@@ -39,6 +39,8 @@ namespace TSVFile
             // 清除 ListView 的所有項目
             lvwWord.Items.Clear();
 
+            int rowIndex = 0; // 用來計算目前是第幾行
+
             // 將 WordCollection 物件中的資料載入到 ListView 中
             foreach (WordItem item in _WordList)
             {
@@ -52,8 +54,21 @@ namespace TSVFile
                     lvi.SubItems.Add(item.Phonogram);
                     lvi.SubItems.Add(item.SoundPath);
                     lvi.SubItems.Add(item.Explain);
+
+                    // 根據 rowIndex 設定背景顏色 (交替列顏色)
+                    if (rowIndex % 2 == 0)
+                    {
+                        lvi.BackColor = Color.LightBlue; // 偶數行顏色
+                    }
+                    else
+                    {
+                        lvi.BackColor = Color.White; // 奇數行顏色 (您可以換成任何喜歡的顏色，例如 Color.AliceBlue)
+                    }
+
                     // 將 ListViewItem 物件加入到 ListView 中
                     lvwWord.Items.Add(lvi);
+                    
+                    rowIndex++; // 行數增加
                 }
             }
             lvwWord.EndUpdate(); //重繪
