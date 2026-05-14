@@ -50,6 +50,18 @@ namespace TSVFile
             lvwWord.EndUpdate(); //重繪;
         }
 
+        // 在您讀取完檔案並將所有項目加入 ListView(lvwWord) 之後，呼叫此方法
+        private void AutoResizeListViewColumns()
+        {
+            // 遍歷 ListView 中的每一個欄位
+            foreach (ColumnHeader column in lvwWord.Columns)
+            {
+                // 寬度設為 -1 表示根據「項目內容」來自動調整寬度
+                // 反之，若設為 -2 則是根據「欄位標題」的長度來調整
+                column.Width = -1;
+            }
+        }
+
         private void tsmiAbout_Click(object sender, EventArgs e)
         {
             // 顯示關於視窗
@@ -77,6 +89,8 @@ namespace TSVFile
 
                 // 將 WordCollection 物件中的資料載入到 ListView 中
                 UpdateListView();
+                // 自動調整欄位寬度
+                AutoResizeListViewColumns();
 
                 this.tsslMessage.Text = $"{_WordList.Count} 單字已成功載入";
             }
